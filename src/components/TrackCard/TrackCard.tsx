@@ -1,7 +1,12 @@
 import { ReactElement } from "react";
 import { ITrack } from "../../interfaces";
 
-export function TrackCard(track: ITrack): ReactElement {
+interface IProp {
+    track: ITrack
+}
+
+export function TrackCard( {track}:  IProp ): ReactElement {
+    console.log(track);
   return (
     <div key={track.id} className="track track-card">
       <img src={track.imgUrl} alt={track.title} />
@@ -10,5 +15,5 @@ export function TrackCard(track: ITrack): ReactElement {
         <p>{track.artist}</p>
       </div>
     </div>
-  );
+  )
 }
