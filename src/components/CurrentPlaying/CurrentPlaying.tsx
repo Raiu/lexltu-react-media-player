@@ -1,14 +1,21 @@
 import { ReactElement } from 'react';
+import { ITrack } from '../../interfaces';
 
-export function CurrentPlaying(): ReactElement {
+import './index.css';
+
+interface IProp {
+    track: ITrack
+}
+
+export function CurrentPlaying({ track }: IProp): ReactElement {
 
     return (
-        <div className="current-playing">
+        <div className="current-playing flex flex-col justify-center items-center">
             <div className="title">
-                <span>Like we used to</span>
+                <span>{track.title}</span>
             </div>
             <div className="artist">
-                <span>A Rocket to the moon</span>
+                <span>{track.artist}</span>
             </div>
         </div>
     )

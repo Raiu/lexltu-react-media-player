@@ -33,6 +33,10 @@ body {
     display: flex;
 }
 
+.flex-col {
+    flex-direction: column;
+}
+
 .grid {
     display: grid;
     grid-auto-flow: column;
