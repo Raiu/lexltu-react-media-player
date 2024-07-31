@@ -15,7 +15,7 @@ export function Player(): ReactElement {
         <section id="player">
             <CoverImg src={currentTrack.imgUrl} alt={currentTrack.title} />
             <CurrentPlaying track={currentTrack} />
-            <Seekbar />
+            <Seekbar duration={currentTrack.duration} />
             <Controls />
         </section>            
     )
