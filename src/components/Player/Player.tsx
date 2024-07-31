@@ -6,12 +6,14 @@ import { CurrentPlaying } from '../CurrentPlaying';
 import { tracks } from '../../data';
 
 import './index.css';
+import { CoverImg } from '../CoverImg';
 
 
 export function Player(): ReactElement {
     const currentTrack = tracks[0];
     return (
         <section id="player">
+            <CoverImg src={currentTrack.imgUrl} alt={currentTrack.title} />
             <CurrentPlaying track={currentTrack} />
             <Seekbar />
             <Controls />
